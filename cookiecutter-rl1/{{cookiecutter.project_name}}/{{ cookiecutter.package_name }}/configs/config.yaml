@@ -1,0 +1,27 @@
+project:
+  name: {{ cookiecutter.project_name }}
+  author: {{ cookiecutter.author_name }}
+  description: {{ cookiecutter.description }}
+
+environment:
+  name: MiniGrid-MemoryS7-v0
+
+training:
+  total_timesteps: 1e6
+  learning_rate: 3e-4
+  n_steps: 128
+  batch_size: 256
+  n_epochs: 10
+  gamma: 0.99
+{% if cookiecutter.use_pytorch == 'y' %}
+model:
+  framework: pytorch
+  policy_type: MlpPolicy
+{% elif cookiecutter.use_tensorflow == 'y' %}
+model:
+  framework: tensorflow
+  policy_type: MlpPolicy
+{% endif %}
+logging:
+  wandb_project: {{ cookiecutter.project_name }}
+  wandb_enabled: {{ 'true' if cookiecutter.use_wandb == 'y' else 'false' }}

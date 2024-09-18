@@ -1,0 +1,36 @@
+# Core dependencies
+{%- if cookiecutter.use_gymnasium == 'y' %}
+gymnasium
+{%- endif -%}
+{%- if cookiecutter.use_minigrid == 'y' %}
+minigrid
+{%- endif -%}
+{%- if cookiecutter.use_pytorch == 'y' %}
+torch
+{%- endif -%}
+{%- if cookiecutter.use_pytorch_lightning == 'y' %}
+pytorch-lightning
+{%- endif -%}
+{%- if cookiecutter.use_tensorflow == 'y' %}
+tensorflow
+{%- endif -%}
+{%- if cookiecutter.use_stable_baselines3 == 'y' %}
+stable-baselines3
+sb3-contrib
+{%- endif -%}
+{%- if cookiecutter.use_ray == 'y' %}
+ray
+{%- endif -%}
+{%- if cookiecutter.use_wandb == 'y' %}
+wandb
+{%- endif %}
+
+# Utilities
+notebook
+numpy
+scikit-learn
+matplotlib
+seaborn
+pandas
+tqdm
+hydra-core

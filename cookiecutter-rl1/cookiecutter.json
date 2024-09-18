@@ -1,0 +1,21 @@
+{
+    "project_name": "my_rl_project",
+    "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "author_name": "Your Name",
+    "description": "A Reinforcement Learning project.",
+    "python_version": "3.9",
+    "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
+    "environment_manager": ["conda", "pipenv", "poetry", "none"],
+    "dependency_file":["requirements.txt", "environment.yml", "none"],
+    "use_gymnasium": "y",
+    "use_minigrid": "y",
+    "use_git": "y",
+    "use_tensorflow": "n",
+    "use_pytorch": "y",
+    "use_pytorch_lightning": "n",
+    "use_ray": "n",
+    "use_stable_baselines3": "y",
+    "use_wandb": "y",
+    "create_author_file": "n"
+  }
+  
